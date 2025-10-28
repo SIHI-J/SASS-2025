@@ -1,0 +1,102 @@
+/*style.scss파일*/
+$b_color:#333;
+$r_color:#f00;
+$time:0.3s;
+
+//sns서식
+
+@mixin sns{
+  font-size: 30px;
+  color: $b_color;
+}
+.sns{
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+}
+.sns ul, .sns li{
+  list-style: none;
+  @include sns;
+}
+@mixin hover{
+  color: $r_color;
+}
+.sns li i{ transition:$time;}
+.sns li:hover i{
+  @include hover;
+  transform: translateY(-5px);
+}
+//버튼 믹스인 함수
+@mixin btn{
+  width: 300px; height: 40px;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: $b_color;
+}
+.btn{@include btn;}
+// 매개변수가 있는 믹스인 함수 작성
+@mixin bgcolor($bgcolor){
+  background-color: $bgcolor;
+}
+.btn1{@include bgcolor(#f00);}
+.naver{@include bgcolor(rgb(0, 228, 19));}
+.kakao{@include bgcolor(rgb(231, 235, 0));}
+
+// 실습3 믹스인 함수의 매개변수값 설정하기(기본값)
+@mixin border_style($w:1px, $s: solid, $c:#ccc){
+  border: $w $s $c;
+}
+
+.list01 > li:nth-child(2){
+  @include border_style(3px, solid, #f00);  
+}
+
+.list01 > li:nth-child(3){
+  @include border_style(4px, double, #00f);
+}
+
+.list01 > li:nth-child(4){
+  @include border_style(4px, dotted, #0f0);
+}
+.list01 > li:nth-child(5){
+  @include border_style(4px, dashed, rgb(255, 123, 0));
+}
+.list01 > li {
+  @include border_style; 
+  &:hover {
+    @include border_style($w:3px ,$c:#000); 
+  }
+}
+//달력
+@mixin border($w:1px, $s:solid, $c:#ccc){
+  border: $w $s $c;
+}
+$t_width: 500px;
+.calender{
+  width: $t_width;
+  border-collapse: collapse;
+  @include border;
+}
+.calender th,.calender td{
+  @include border;
+}
+@mixin t_caption($bg:#ff9100){
+  background-color: $bg;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+.calender caption{
+  @include t_caption;
+}
+@mixin odd_tr($bg:#ffb88f){
+  background:$bg;
+}
+@mixin even_tr($bg:#ffe5d6){
+  background:$bg;
+}
+.calender tr:nth-child(2n){
+  @include even_tr;
+}
+.calender tr:nth-child(2n+1){
+  @include odd_tr;
+}
