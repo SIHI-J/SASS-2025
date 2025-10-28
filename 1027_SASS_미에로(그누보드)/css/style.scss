@@ -1,0 +1,46 @@
+// 변수선언
+$myFont:"맑은고딕",arial, sans-serif; 
+$b_color_w: #fff;
+$b_Font_color: #000;
+$b_Font_size: 12px;
+$big_Font_size: 30px;
+$c: center;
+$b_w:1200px;
+$a_c: 0 auto;
+$border1: 1px solid $b_color_w;
+
+body{
+  font-family: $myFont;
+  color: $b_Font_color;
+  font-size: $b_Font_size;
+}
+
+header, main, footer{
+  width: $b_w;
+  margin: $a_c;
+}
+// 헤더서식
+header{
+  text-align: $c;
+  background-color: #ffff00;
+  >h1{
+    font-size: $b_Font_size;
+  }
+}
+//메인서식
+main{
+  background:#00ff00;
+  height:400px;
+}
+
+//하단 푸터영역
+footer{
+  background: $b_Font_color;
+  text-align: $c;
+}
+
+footer > address{
+  color:$b_color_w;
+  line-height: 40px;
+  font-style: normal;
+}

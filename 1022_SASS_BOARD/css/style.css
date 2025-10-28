@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*기본 크기*/
+/*메뉴 크기*/
+/*큰 제목*/
+/*작은 제목*/
+body {
+  font-family: "맑은고딕", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+.title2 {
+  font-family: "Noto Sans KR", serif;
+  font-size: 22px;
+  color: #00f;
+}
+
+.title3 {
+  font-size: 18px;
+  color: #f00;
+  line-height: 40px;
+}
+
+/* ...생략기호 나오게 하는 서식 */
+.p01 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid #333;
+  background-color: #ff0;
+}
+
+.btn {
+  font-family: "Noto Sans";
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #333;
+  padding: 0px 10px;
+  width: 170px;
+  height: 56px;
+}
+
+.btn_c {
+  color: #fff;
+  background-color: rgb(128, 0, 167);
+}
+
+.btn_w {
+  background-color: #fff;
+}/*# sourceMappingURL=style.css.map */

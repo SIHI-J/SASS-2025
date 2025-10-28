@@ -1,0 +1,75 @@
+// 전역 변수 선언
+$margin:10px;
+$padding:14px;
+$r_color:#ff0000;
+.list{
+  h3{
+    color: #333;
+    padding: $padding;
+    margin: $margin;
+    border: 1px solid $r_color;
+    font:{
+      family:'궁서체';
+      size: 30px;
+      weight: bold;
+      style: italic
+    }
+  }
+  ul{
+    margin: 0px; padding: 0px;
+    >li{
+      list-style: none;
+      margin: 10px 0px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      line-height: 40px;
+      >a{
+        color: #333;
+        text-decoration: none;
+        display: block;
+      }
+      >a{
+        &:hover{background-color: #ffff00;}
+      }
+    }
+  }
+}
+// 탭콘
+$aact: #f19a9a;
+$t_align_c: center;
+$t_height: 320px;
+article{
+  width: 400px; height: 320px;
+  border: 1px solid $aact;
+  > h3{display: none;}
+  > .tab{
+    display: flex;
+    justify-content: space-between;
+    img{width: 100%;}
+    ul{
+      width: 30%;
+      margin: 0px; padding: 0px;
+      height: $t_height;
+      >li{
+        list-style: none;
+        text-align: $t_align_c;
+        height: 25%;
+        >a{
+          color: #333;
+          text-decoration: none;
+          line-height: 80px;
+          display: inline-block;
+          width: 100%;
+          font:{
+            size: 12px;
+          }
+          &.act{
+            background-color: $aact;
+            color: #fff;
+            line-height: 80px;
+          }
+        }
+      }
+    }
+  }
+}

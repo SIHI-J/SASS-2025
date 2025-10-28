@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.list h3 {
+  color: #333;
+  padding: 14px;
+  margin: 10px;
+  border: 1px solid #ff0000;
+  font-family: "궁서체";
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+.list ul {
+  margin: 0px;
+  padding: 0px;
+}
+.list ul > li {
+  list-style: none;
+  margin: 10px 0px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  line-height: 40px;
+}
+.list ul > li > a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+.list ul > li > a:hover {
+  background-color: #ffff00;
+}
+
+article {
+  width: 400px;
+  height: 320px;
+  border: 1px solid #f19a9a;
+}
+article > h3 {
+  display: none;
+}
+article > .tab {
+  display: flex;
+  justify-content: space-between;
+}
+article > .tab img {
+  width: 100%;
+}
+article > .tab ul {
+  width: 30%;
+  margin: 0px;
+  padding: 0px;
+  height: 320px;
+}
+article > .tab ul > li {
+  list-style: none;
+  text-align: center;
+  height: 25%;
+}
+article > .tab ul > li > a {
+  color: #333;
+  text-decoration: none;
+  line-height: 80px;
+  display: inline-block;
+  width: 100%;
+  font-size: 12px;
+}
+article > .tab ul > li > a.act {
+  background-color: #f19a9a;
+  color: #fff;
+  line-height: 80px;
+}

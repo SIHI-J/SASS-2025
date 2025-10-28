@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sass소개와 문법 학습하기</title>
+  <style>
+    *{margin: 0px; padding: 0px;}
+    body{ 
+      font-family: "맑은고딕", Arial, Helvetica, sans-serif;
+      font-size: 0.81rem; /*절대단위 px을 상대단위 em으로 변환(요즘은 rem요소를 많이 씀)*/
+      color: #333;
+    }
+    a{
+      text-decoration: none;
+      color: #333;
+    }
+    header{
+      background-color: #ffcae5;
+      text-align: center;
+    }
+    h1>img{
+      width: 130px;
+    }
+    h2{
+      display: none;
+    }
+    dl{
+      margin: 18px 0px;
+      line-height: 40px;
+      
+    }
+    dl>dt{
+      background-color: #d877b3;
+      color: #ffffff;
+      text-indent: 10px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    dl>dd{
+      background-color: #eee;
+      border-bottom: 1px solid #ccc;
+      text-indent: 16px;
+    }
+    dl>dd>a{
+      display: block;
+      transition: 0.5s;
+    }
+    dl>dd>a:hover{
+      background-color: #ffcfd7;
+      color: #333333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><img src="./logo.png" alt="sass 로고"></h1>
+  </header>
+  <main>
+    <section>
+  <h2>sass 소개와 문법 학습하기</h2>
+  <dl>
+    <dt>1일차</dt>
+    <dd><a href="./1021_SASS/사스 소개와 문법.html" title="01_sass소개와 문법">01_sass소개와 문법</a></dd>
+    <dt>2일차</dt>
+    <dd><a href="./1022_SASS_BOARD/02_sass문법_믹싱문법(mixing)_include기법.html" title="02_sass문법_믹싱문법(mixing)_include기법">02_sass문법_믹싱문법(mixing)_include기법</a></dd>
+    <dt>3일차</dt>
+    <dd><a href="./1023_SASS_미에로/sass문법_믹싱기법을 활용한 모바일 토글버튼 구현하기.html" title="sass문법_믹싱기법을 활용한 모바일 토글버튼 구현하기">sass문법_믹싱기법을 활용한 모바일 토글버튼 구현하기</a></dd>
+    <dt>4일차</dt>
+    <dd><a href="./1024_SASS_미에로/믹스인 함수와 매개볌수 응용하기.html" title="mixin 함수와 매개변수 응용하기">mixin 함수와 매개변수 응용하기</a></dd>
+    <dt>5일차</dt>
+    <dd><a href="./1027_SASS_미에로(그누보드)/01_변수의 개념과 활용.html" title="01_변수의 개념과 활용">01_변수의 개념과 활용</a></dd>
+    <dd><a href="./1027_SASS_미에로(그누보드)/02_중첩규칙.html" title="02_중첩규칙">02_중첩규칙</a></dd>
+    <dt>6일차</dt>
+    <dd><a href="./1028_SASS_미에로(그누보드)/01_sass문법_import(외부 sass파일 삽입).html">01_sass문법_import</a></dd>
+    <dd><a href="./1028_SASS_미에로(그누보드)/02_sass문법_내장함수.html">02_sass문법_내장함수</a></dd>
+    <dd><a href="./1028_SASS_미에로(그누보드)/03_sass문법_if문.html">03_sass문법_if문</a></dd>
+    <dd><a href="./1028_SASS_미에로(그누보드)/04_sass문법_반복문.html">04_sass문법_반복문</a></dd>
+  </dl>
+  </section>
+  </main>
+</body>
+</html>
