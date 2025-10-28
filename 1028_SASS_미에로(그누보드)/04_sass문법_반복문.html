@@ -119,17 +119,13 @@
         let a=$(this).next('dd');
         let i=$(this).find('i');
         // 다른 질문이 눌리면 이전에 열린 답변을 닫고 아이콘도 원래대로
-          if (a.is(':visible')) {
-            // 답변이 열려 있으면 닫기
-            a.stop().slideUp();
-            i.removeClass('act'); // 아이콘을 원래 상태로 되돌리기
-          } else {
-            // 다른 답변이 열려 있으면 먼저 닫고, 아이콘 원상복구
-            answer.not(a).slideUp();
-            btn.removeClass('act'); // 모든 아이콘 원래 상태로 되돌리기
-            a.stop().slideToggle();  // 클릭한 답변을 토글(열고 닫기)
-            i.addClass('act');  // 클릭한 아이콘에만 'act' 클래스 추가
-          }
+        if (a.is(':visible')) {
+          a.stop().slideUp();  // 답변을 닫기
+          i.removeClass('act');  // 아이콘 원래대로
+        } else {
+          a.stop().slideToggle();  // 답변 열고 닫기
+          i.toggleClass('act');  
+        }
       });
     })
   </script>
