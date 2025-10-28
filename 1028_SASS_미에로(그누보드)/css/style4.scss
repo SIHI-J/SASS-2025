@@ -1,0 +1,93 @@
+div{
+  height: 50px;
+  margin-bottom: 10px;
+  background: pink;
+}
+// @for $i from 1 to 6{
+//   //1~5 반복실행
+//   div:nth-of-type(#{$i}){
+//     width: 50px*$i; //50씩 증가
+//     /*
+//     50*1=50
+//     50*2=100
+//     50*3=150
+//     50*4=200
+//     50*5=250
+//     */
+//   }
+// }
+$bg_color: #f4f4f2;
+@for $i from 1 through 6{
+  div:nth-of-type(#{$i}){
+  width: 100px*$i;
+  }
+}
+p>span{
+  color: green;
+}
+.searchbox{
+  position: relative;
+  display: flex;            
+  justify-content: flex-end; 
+  gap: 10px;
+  margin: 36px auto;
+  padding-right: 20px;
+  align-items: center;      
+  background: $bg_color;
+  height: 60px;
+  line-height: 60px;
+  #search{
+    width: 360px;
+    height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  label{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 4px 10px;
+    background: #777;
+    color: #ffffff;
+  }
+}
+.qna*{margin: 0; padding: 0;}
+.qna{
+  width: 1200px; margin: 0 auto;
+  >h3{
+    color: #333;
+    font-size: 28px;
+  }
+  >p{
+    color: #333;;
+  }
+  >dl{
+    border-top: 1px solid #333;
+    @for $i from 1 through 10 {
+      dt:nth-of-type(#{$i}){
+        color: green;
+        font-weight: bold;
+        padding: 20px 10px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+        .fa-solid{
+          transition: transform 0.3s;
+          color: #333;
+          float: right;
+        }
+        .act{
+          transform: rotate(180deg);
+        }
+      }
+      dd:nth-of-type(#{$i}){
+        margin: 0px;
+        color: #333;
+        background: $bg_color;
+        padding: 20px 10px;
+        font-size: 14px;
+      }
+    }
+  }
+}
